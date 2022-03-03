@@ -8,7 +8,7 @@ public class JwtController {
     @ResponseBody
     public ResponseEntity<?> loginAction( @RequestParam(value="name") String name, @RequestParam(value="pwd") String pwd, HttpServletResponse response) {
 
-        JwtController jwtcon = new JwtController();
+        JwtUtil jwtcon = new JwtUtil();
         String token = null;
 
         //id pwd 검증하는 부분 -> 맞으면 토큰 발급. 여기선 그냥 yj 이면 friend ,  choi 면 visitor 함.
