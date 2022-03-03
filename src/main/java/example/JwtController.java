@@ -20,7 +20,7 @@ public class JwtController {
         //
 
         response.setHeader("X-AUTH-TOKEN", token);  // response header 세팅
-        Cookie cookie = new Cookie("X-AUTH-TOKEN", token); // 쿠키에 저장해 다음 요청때 쓸 수 있도록 함.
+        Cookie cookie = new Cookie("accesstoken", token); // 쿠키에 저장해 다음 요청때 쓸 수 있도록 함.
         cookie.setPath("/");
         cookie.setHttpOnly(true);
         cookie.setSecure(true);
