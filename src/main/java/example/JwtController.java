@@ -33,8 +33,6 @@ public class JwtController {
     @GetMapping(value ="/exampletoken")
     @ResponseBody
     public ResponseEntity<?> loginActionWithToken( @RequestHeader Map<String, String> data) {
-
-        JwtController jwtcon = new JwtController();
         String token = null;
 
         //header 에  accesstoken이란 값이 있다면 파싱
